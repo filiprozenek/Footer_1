@@ -1,0 +1,171 @@
+/* Code by filiprozenek -> https://github.com/filiprozenek */
+/* ⬇ VARIABLES */
+:root {
+    --bg-color:         rgba(255,255,255,1);
+    --bg-sub-color:     rgba(224,224,224,1);
+    --lead-color:       rgba(0,0,0,1);
+    --color:            rgba(128,128,128,1);
+    --sub-color:        rgba(224,224,224,1);
+    }
+/* ⬆ VARIABLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+html, body {
+    position: relative;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    }
+body {
+    max-width: 1024px;
+    min-height: 100vh;
+    margin: 0 auto;
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--bg-color)     0px,
+        var(--bg-color)     5px, 
+        var(--bg-sub-color) 5px, 
+        var(--bg-sub-color) 10px);
+    } 
+    .all {
+    display: grid;
+    max-width: 1024px;
+    grid-template-areas:    "H"
+                            "C"
+                            "F";
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 1550px 30px;
+    }
+/* ⬇ HEADER */
+.header {
+    grid-area: H;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='1' stroke-dasharray='15' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-end;
+    }
+/* ⬆ HEADER */
+/* ⬇ NAVIGATION */              
+/* ⬆ NAVIGATION */
+/* ⬇ CONTENT */
+.content {
+    grid-area: C;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='black' stroke-width='1' stroke-dasharray='15' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: flex-end;
+    }
+/* ⬆ CONTENT */
+.jumpmark {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    }
+    a.jumpmark:link {
+        color: var(--lead-color);
+        }
+    a.jumpmark:visited {
+        color: var(--lead-color);
+        }
+    a.jumpmark:hover {
+        color: var(--lead-color);
+        }
+    a.jumpmark:active {
+        color: var(--lead-color);
+        }
+    .icon-up-open {
+        font-size: 40px;
+        position: relative;
+        transform: translate(0, 0);
+        transition: transform 0.5s ease-in-out;
+        }
+        .icon-up-open:nth-child(1) {
+            top: 4px;
+            }
+        .icon-up-open:nth-child(2) {
+            bottom: 44px;
+            }
+    .jumpmark:hover .icon-up-open:nth-child(1) {
+        transform: translate(0, -8px); 
+        transition: transform 0.5s ease-in-out;
+        }
+    .jumpmark:hover .icon-up-open:nth-child(2) {
+        transform: translate(0, 8px); 
+        transition: transform 0.5s ease-in-out;
+        }
+/* ⬇ FOOTER */
+.footer {
+    grid-area: F;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--lead-color);
+    }
+    .brand {
+        display: flex;
+        margin: 5px;
+        }
+    .copyright > ul {
+        display: flex;
+        list-style: none;
+        margin: 5px;
+        }
+        .icon-copyright {
+            font-size: 15px;
+            margin: 0 5px;
+            color: var(--color);
+            }
+        a.e-mail:link {
+            text-decoration: none;
+            }
+        a.e-mail:visited {
+            text-decoration: none;
+            }
+        a.e-mail:hover {
+            text-decoration: none;
+            }
+        a.e-mail:active {
+            text-decoration: none;
+            }
+/* ⬆ FOOTER */
+/* ⬇ FONTS */
+h1.ghost {
+    font-size: 20px;
+    text-align: right;
+    text-transform: lowercase;
+    line-height: 1;
+    padding: 5px;
+    font-family: 'Cutive Mono', monospace;
+    color: var(--color);
+    }
+.footer > div > h1 {
+    font-size: 20px;
+    text-align: left;
+    line-height: 1;
+    font-family: 'Cutive Mono', monospace;
+    color: var(--bg-color);
+    }
+h4 {
+    font-size: 15px;
+    text-align: left;
+    line-height: 1;
+    padding: 2.5px 0;
+    font-family: 'Cutive Mono', monospace;
+    color: var(--color);
+    }
+/* ⬆ FONTS */
